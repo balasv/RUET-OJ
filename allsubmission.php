@@ -138,7 +138,7 @@ if(!isset($_POST['id']) && !isset($_GET['name']))
 
 
 
-   $show="SELECT * FROM submission ORDER BY sid DESC limit $start,$per_page";
+   $show="SELECT * FROM submissions ORDER BY sid DESC limit $start,$per_page";
 
    
    $sts=mysqli_query($con,$show);
@@ -171,7 +171,7 @@ while($row=mysqli_fetch_array($sts))
 </table>
 </div>";
 
-  $psql="SELECT * FROM submission ORDER BY sid DESC";
+  $psql="SELECT * FROM submissions ORDER BY sid DESC";
   $sn=mysqli_query($con,$psql);
   $total_rows=mysqli_num_rows($sn);
   $total_page=ceil($total_rows/$per_page);
@@ -219,7 +219,7 @@ if(isset($_GET['name']))
 
 
 
-   $show="SELECT * FROM submission WHERE sname='$name' ORDER BY sid DESC limit $start,$per_page";
+   $show="SELECT * FROM submissions WHERE sname='$name' ORDER BY sid DESC limit $start,$per_page";
 
    
    $sts=mysqli_query($con,$show);
@@ -251,7 +251,7 @@ while($row=mysqli_fetch_array($sts))
 </table>
 </div>";
 
-  $psql="SELECT * FROM submission WHERE sname='$name' ORDER BY sid DESC";
+  $psql="SELECT * FROM submissions WHERE sname='$name' ORDER BY sid DESC";
   $sn=mysqli_query($con,$psql);
   $total_rows=mysqli_num_rows($sn);
   $total_page=ceil($total_rows/$per_page);
@@ -364,7 +364,7 @@ $ao=$r3['output'];
 
 
 
-$sql="INSERT INTO submission VALUES('$nid','$username','$result','$pname','$cpu') ";
+$sql="INSERT INTO submissions VALUES('$nid','$username','$result','$pname','$cpu') ";
 $show="SELECT * FROM submission ORDER BY sid DESC limit $start,$per_page";
 
 
@@ -399,7 +399,7 @@ while($row=mysqli_fetch_array($sts))
 </table>
 </div>";
 
-  $psql="SELECT * FROM submission ORDER BY sid DESC";
+  $psql="SELECT * FROM submissions ORDER BY sid DESC";
   $sn=mysqli_query($con,$psql);
   $total_rows=mysqli_num_rows($sn);
   $total_page=ceil($total_rows/$per_page);
