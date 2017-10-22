@@ -425,7 +425,7 @@ else
    $tsolved=0;
 }
  
- echo "<div class=\"alert alert-success\">$suser's Total Solved Problem= $tsolved</div>";
+ //echo "<div class=\"alert alert-success\">$suser's Total Solved Problem= $tsolved</div>";
  echo "<div class=\"alert alert-success\">$suser's Total Submission=$detect</div>";
 
   $psql="SELECT * FROM submission WHERE cid='$conid' AND sname='$suser' ORDER BY sid DESC";
