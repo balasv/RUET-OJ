@@ -109,9 +109,9 @@ if(isset($_GET['user']))
    
 }
 
-$ac="SELECT COUNT(verdict) AS verdict FROM submission where verdict='Accepted' and sname='$us'";
-$wa="SELECT COUNT(verdict) AS verdict FROM submission where verdict='Wrong Answer' and sname='$us'";
-$tle="SELECT COUNT(verdict) AS verdict FROM submission where verdict='Time Limit Exceed' and sname='$us'";
+$ac="SELECT COUNT(verdict) AS verdict FROM submissions where verdict='Accepted' and sname='$us'";
+$wa="SELECT COUNT(verdict) AS verdict FROM submissions where verdict='Wrong Answer' and sname='$us'";
+$tle="SELECT COUNT(verdict) AS verdict FROM submissions where verdict='Time Limit Exceed' and sname='$us'";
 
 $s1=mysqli_query($con,$ac);
 $s2=mysqli_query($con,$wa);
@@ -269,7 +269,7 @@ $send=mysqli_query($con,$sql);
 $row=mysqli_fetch_array($send);
 
 
-$ts="SELECT DISTINCT sname, COUNT(verdict) AS verdict FROM ( SELECT * FROM submission where verdict='Accepted' and sname='$username' GROUP BY pbname, sname)T1 GROUP BY sname";
+/*$ts="SELECT DISTINCT sname, COUNT(verdict) AS verdict FROM ( SELECT * FROM submission where verdict='Accepted' and sname='$username' GROUP BY pbname, sname)T1 GROUP BY sname";
 
 $sts=mysqli_query($con,$ts);
 
@@ -281,7 +281,7 @@ if($tsolved=="")
 {
    $tsolved=0;
 }
-
+*/
 
 ?>
 
@@ -319,7 +319,7 @@ if($tsolved=="")
 
   </div><br>
 
-  <div class="alert alert-success"><?php echo "<b>$username's Total Solved Problem = $tsolved</b>" ;?></div><br><br><br>
+  <!--<div class="alert alert-success"><?php echo "<b>$username's Total Solved Problem = $tsolved</b>" ;?></div><br>--><br><br>
   
   <h3 style="text-align:center;"><?php  echo"$username's Contest History"?></h3><br><br>
 
