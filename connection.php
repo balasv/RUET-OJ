@@ -6,7 +6,7 @@ $user = getenv("databaseuser");
 $pass = getenv("databasepassword");
 $db="problem";
 
-$con=mysqli_connect($host,$user,$pass,$db);
+/*$con=mysqli_connect($host,$user,$pass,$db);
 
 if(!$con)
 {
@@ -16,7 +16,7 @@ if(!$con)
 else
 {
 	//echo("Connected");
-}
+}*/
 
 
 
