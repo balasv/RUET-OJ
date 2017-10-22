@@ -124,7 +124,7 @@ if(isset($pn))
 {
 
 
-$sql="INSERT INTO archieve VALUES('','$pn','$pd','$author','$tc','$ac','','$ptl')";
+$sql="INSERT INTO archieve VALUES(NULL,'$pn','$pd','$author','$tc','$ac','','$ptl')";
 
 $sq=mysqli_query($con,$sql);
 
@@ -159,17 +159,17 @@ while($row=mysqli_fetch_array($send))
 
     $problem_name=$row['pbname'];
 
-	$number="SELECT verdict from submission WHERE pbname='$row[pbname]' and sname='$username' and verdict='Accepted'";
+	$number="SELECT verdict from submissions WHERE pbname='$row[pbname]' and sname='$username' and verdict='Accepted'";
 	$snumber=mysqli_query($con,$number);
 	$tsol=mysqli_num_rows($snumber);
 
-	$acn="SELECT COUNT(verdict) AS verdict from submission WHERE verdict='Accepted' AND pbname='$row[pbname]' GROUP BY pbname";
+	$acn="SELECT COUNT(verdict) AS verdict from submissions WHERE verdict='Accepted' AND pbname='$row[pbname]' GROUP BY pbname";
 	$sacn=mysqli_query($con,$acn);
 	$sol=mysqli_fetch_array($sacn);
 
 
 
-	$tsub="SELECT COUNT(verdict) as sub from submission WHERE pbname='$row[pbname]' GROUP BY pbname";
+	$tsub="SELECT COUNT(verdict) as sub from submissions WHERE pbname='$row[pbname]' GROUP BY pbname";
 	$stsub=mysqli_query($con,$tsub);
 	$ntsub=mysqli_fetch_array($stsub);
 
@@ -260,16 +260,16 @@ if(!isset($pn))
 	{
 		$problem_name=$row['pbname'];
 
-		$number="SELECT verdict from submission WHERE pbname='$row[pbname]' and sname='$username' and verdict='Accepted'";
+		$number="SELECT verdict from submissions WHERE pbname='$row[pbname]' and sname='$username' and verdict='Accepted'";
 	$snumber=mysqli_query($con,$number);
 	$tsol=mysqli_num_rows($snumber);
 
-	$acn="SELECT COUNT(verdict) AS verdict from submission WHERE verdict='Accepted' AND pbname='$row[pbname]' GROUP BY pbname";
+	$acn="SELECT COUNT(verdict) AS verdict from submissions WHERE verdict='Accepted' AND pbname='$row[pbname]' GROUP BY pbname";
 	$sacn=mysqli_query($con,$acn);
 	$sol=mysqli_fetch_array($sacn);
 
 
-	$tsub="SELECT COUNT(verdict) as sub from submission WHERE pbname='$row[pbname]' GROUP BY pbname";
+	$tsub="SELECT COUNT(verdict) as sub from submissions WHERE pbname='$row[pbname]' GROUP BY pbname";
 	$stsub=mysqli_query($con,$tsub);
 	$ntsub=mysqli_fetch_array($stsub);
 
