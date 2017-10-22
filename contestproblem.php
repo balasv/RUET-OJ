@@ -433,7 +433,7 @@ $ptl=$_POST['tll'];
 if($access==1)
 {
 
-$q2="INSERT into element  VALUES('$cid','$contest','$pn','$des','$au','$tc','$out','','','$ptl')";
+$q2="INSERT into element  VALUES('$cid','$contest','$pn','$des','$au','$tc','$out','',NULL,'$ptl')";
 $q3="SELECT * FROM element WHERE cname='$contest'";
 
 $sq2=mysqli_query($con,$q2);
