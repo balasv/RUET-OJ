@@ -365,7 +365,7 @@ $ao=$r3['output'];
 
 
 $sql="INSERT INTO submissions VALUES('$nid','$username','$result','$pname','$cpu') ";
-$show="SELECT * FROM submission ORDER BY sid DESC limit $start,$per_page";
+$show="SELECT * FROM submissions ORDER BY sid DESC limit $start,$per_page";
 
 
 $stq=mysqli_query($con,$sql);
