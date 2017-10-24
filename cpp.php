@@ -218,10 +218,10 @@ $limit=$r4['tlimit'];
 	if($check==0 || $check==1)
 	{
 
-        $nsql="INSERT into code VALUES('$us','$source','')";
+        $nsql="INSERT into codes VALUES('$us','$source','')";
 		$usql="UPDATE archieve SET uoutput='$output' WHERE id='$pid'";
 		$csql="SELECT uoutput FROM archieve WHERE id='$pid'";
-		$q3="SELECT id FROM code ORDER BY id DESC ";
+		$q3="SELECT id FROM codes ORDER BY id DESC ";
 		$snq=mysqli_query($con,$nsql);
 		$snd=mysqli_query($con,$usql);
 		$cnd=mysqli_query($con,$csql);
