@@ -385,7 +385,7 @@ else if($_POST['src'])
     if($check==0 || $check==1)
     {
 
-            $nsql="INSERT into code VALUES('$us','$code','')";
+            $nsql="INSERT into code VALUES('$us','$code',NULL)";
 			$usql="UPDATE element SET uoutput='$output' WHERE pbid='$pid'";
 			$csql="SELECT uoutput FROM element WHERE pbid='$pid'";
 			$q3="SELECT id FROM code ORDER BY id DESC ";
