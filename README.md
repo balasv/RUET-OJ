@@ -14,7 +14,20 @@ Platform Of Bangladesh .
 
 http://ruetoj-ruetoj.193b.starter-ca-central-1.openshiftapps.com/home.php
 
+
 # Languages
+
+## Front End
+
+HTML,CSS,BootStrap, Jquery
+
+
+## BackEnd 
+
+PHP, JavaScript, SQL
+
+
+# Judge Languages
 C , C++, C++11 And Java
 
 # Requirements
