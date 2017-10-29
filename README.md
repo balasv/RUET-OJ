@@ -19,12 +19,12 @@ http://ruetoj-ruetoj.193b.starter-ca-central-1.openshiftapps.com/home.php
 
 ## Front End
 
-HTML,CSS,BootStrap, Jquery
+HTML, CSS, BootStrap, Jquery
 
 
 ## BackEnd 
 
-PHP, JavaScript, SQL
+PHP, JavaScript , SQL
 
 
 # Judge Languages
