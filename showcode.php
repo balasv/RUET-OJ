@@ -129,7 +129,7 @@ $get=$_GET['id'];
 
 
 
-$show="SELECT * FROM code WHERE id='$get'";
+$show="SELECT * FROM codes WHERE id='$get'";
 
 $sq=mysqli_query($con,$show);
 
