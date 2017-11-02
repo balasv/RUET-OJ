@@ -2,6 +2,8 @@
 
 session_start();
 
+require_once("config.php");
+
 $_SESSION['url'] = $_SERVER['REQUEST_URI'];
 
 if(!isset($_SESSION["un"]))
